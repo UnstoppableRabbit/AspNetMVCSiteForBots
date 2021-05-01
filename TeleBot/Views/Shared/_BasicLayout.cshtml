@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML>
+<!--
+    Halcyonic by HTML5 UP
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>TeleBot - разработка телеграм-бота</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body>
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <section id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+
+                        <!-- Logo -->
+                        <h1><a asp-action="Index" asp-controller="Home" id="logo">TeleBot</a></h1>
+
+                        <!-- Nav -->
+                        <nav id="nav">
+                            <a asp-action="Index" asp-controller="Home">Домашняя страница</a>
+                            <a href="threecolumn.html">Заказать бота</a>
+                            <a asp-action="Index" asp-controller="Comment" asp-all-route-data='new Dictionary<string, string> { { "id", "1" } }'>Комментарии</a>
+                            <a asp-action="Index" asp-controller="Profile">Профиль</a>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+            <div id="banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-12-medium">
+
+                            <!-- Banner Copy -->
+                            <p>Разработка ботов для телеграма и вконтакте для ваших задач</p>
+                            <a href="#" class="button-large">Заказать бота</a>
+
+                        </div>
+                        <div class="col-6 col-12-medium imp-medium">
+
+                            <!-- Banner Image -->
+                            <a href="#" class="bordered-feature-image"><img src="images/banner.jpg" alt="" /></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @RenderBody()
+
+        <!-- Footer -->
+        <section id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 col-12-medium">
+
+                        <!-- Links -->
+                        <section>
+                            <h2>Ссылки</h2>
+                            <div>
+                                <div class="row">
+                                    <div class="col-3 col-12-small">
+                                        <ul class="link-list last-child">
+                                            <li><a href="#">Телеграм</a></li>
+                                            <li><a href="#">Вконтакте</a></li>
+                                            <li><a href="#">LinkedIn</a></li>
+                                            <li><a href="#">GitHub</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3 col-12-small">
+                                        <ul class="link-list last-child">
+                                            <li><a href="#">Neque amet dapibus</a></li>
+                                            <li><a href="#">Sed mattis quis rutrum</a></li>
+                                            <li><a href="#">Accumsan suspendisse</a></li>
+                                            <li><a href="#">Eu varius vitae magna</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                    <div class="col-4 col-12-medium imp-medium">
+
+                        <!-- Blurb -->
+                        <section>
+                            <h2>TeleBot - лучший сервис по разработке телеграм-ботов</h2>
+                            <p>
+                                При заказе бота разработчик отправит вам на зарегестрированный
+                                Email сообщение. Для дальнейших пожеланий к функционалу бота
+                                рекомендуем использовать ссылки предоставленные на сайте.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <div id="copyright">
+            &copy; TeleBot. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/browser.min.js"></script>
+    <script src="~/js/breakpoints.min.js"></script>
+    <script src="~/js/util.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>
+</html>
