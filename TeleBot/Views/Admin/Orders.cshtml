@@ -1,0 +1,13 @@
+﻿@model List<TeleBot.Models.Order>
+@{
+    Layout = "_SecondLayout";
+}
+@foreach (var i in Model)
+{
+    <div>
+        <p>@(i.OrderId)</p>
+        <p>@(i.PersonId)</p>
+        <p>@(i.OrderDesc)</p>
+        <p>@(i.Status)</p>
+    </div>
+}

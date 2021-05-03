@@ -1,0 +1,12 @@
+﻿@model List<TeleBot.Models.Comment>
+@{
+    Layout = "_SecondLayout";
+}
+@foreach(var i in Model)
+{
+ <div>
+    <p>@(i.CommentId)</p>
+    <p>@(i.Text)</p>
+    <p>@(i.PersonId)</p>
+ </div>
+}

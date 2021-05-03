@@ -36,11 +36,15 @@ namespace TeleBot.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(CommentModel model)
         {
-            var com = new Comment { Text = model.Comment, PersonId = bc.Persons.Where(x => x.Email == User.Identity.Name).Select(x=>x.PersonId).FirstOrDefault() };
+            if (ModelState.IsValid)
+            {
+                var com = new Comment { Text = model.Comment, CommentDate = DateTime.Now, PersonId = bc.Persons.Where(x => x.Email == User.Identity.Name).Select(x => x.PersonId).FirstOrDefault() };
                 bc.Comment.Add(com);
                 await bc.SaveChangesAsync();
-
-        return RedirectToAction("Index", "Comment", new { id = 1 });   
+                return RedirectToAction("Index", "Comment", new { id = 1 });
+            }
+            else
+                return RedirectToAction("Index", "Comment", new { id = 1 });
         }
     }
 }

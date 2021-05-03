@@ -12,5 +12,6 @@ namespace TeleBot.Models
         public string Status { get; set; }
         public int PersonId { get; set; }
         public Person person { get; set; }
+        public DateTime OrderDate { get; set; }
     }
 }

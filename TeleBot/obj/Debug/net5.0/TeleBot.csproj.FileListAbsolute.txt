@@ -147,3 +147,6 @@ C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Comment\
 C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Shared\_SecondLayout.cshtml.g.cs
 C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Profile\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Order\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Admin\Comments.cshtml.g.cs
+C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Admin\Orders.cshtml.g.cs

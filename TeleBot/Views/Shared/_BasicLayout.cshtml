@@ -25,7 +25,7 @@
                         <!-- Nav -->
                         <nav id="nav">
                             <a asp-action="Index" asp-controller="Home">Домашняя страница</a>
-                            <a href="threecolumn.html">Заказать бота</a>
+                            <a asp-action="Index" asp-controller="Order">Заказать бота</a>
                             <a asp-action="Index" asp-controller="Comment" asp-all-route-data='new Dictionary<string, string> { { "id", "1" } }'>Комментарии</a>
                             <a asp-action="Index" asp-controller="Profile">Профиль</a>
                         </nav>
@@ -40,7 +40,7 @@
 
                             <!-- Banner Copy -->
                             <p>Разработка ботов для телеграма и вконтакте для ваших задач</p>
-                            <a href="#" class="button-large">Заказать бота</a>
+                            <a asp-action="Index" asp-controller="Order" class="button-large">Заказать бота</a>
 
                         </div>
                         <div class="col-6 col-12-medium imp-medium">
