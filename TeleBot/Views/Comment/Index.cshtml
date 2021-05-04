@@ -1,41 +1,56 @@
 ﻿@model TeleBot.ViewModels.CommentModel
-@{
-    Layout = "_SecondLayout";
-}
+<section id="content">
+    <div class="container">
+        <div class="row aln-left">
+            @{
+                foreach (var item in @Model.allComs)
+                {
+                    <section style="width: 100%">
+                        <div style="word-wrap: break-word;">
+                            <p> @item.Name </p>
+                            <p> @item.Text </p>
+                            <p> @item.CommentDate</p>
+                        </div>
+                    </section>
+                }
+            }
+            <section style="width: 100%">
+                <form asp-action="Index" asp-controller="Comment" asp-anti-forgery="true">
+                    <div class="validation" asp-validation-summary="ModelOnly"></div>
+                    <div>
+                        <div class="form-group">
+                            <label asp-for="Comment">Введите комментарий</label><br />
+                            <textarea style="width: 100%; height: 120px; margin: 10px; text-wrap:inherit; resize:none" type="text" asp-for="Comment"></textarea>
+                            <span asp-validation-for="Comment" />
+                        </div>
+                        <input type="submit" value="Отправить" class="btn btn-outline-dark" />
+                    </div>
+                </form>
+            </section>
 
-@{
-    foreach (var item in @Model.allComs)
-    {
-        <div>
-            <p> @item.Text </p>
         </div>
-    }
-}
-<form asp-action="Index" asp-controller="Comment" asp-anti-forgery="true">
-    <div class="validation" asp-validation-summary="ModelOnly"></div>
-    <div>
-        <div class="form-group">
-            <label asp-for="Comment">Введите комментарий</label>
-            <input type="text" asp-for="Comment" />
-            <span asp-validation-for="Comment" />
-        </div>
-        <input type="submit" value="Отправить" class="btn btn-outline-dark" />
     </div>
-</form>
-@{ if (Model.CurrentPage - 1 != 0 && Model.CurrentPage != Model.MaxPage)
-    {
-    <a asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage - 1)"> &lt; </a>
-        <a asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage)"> @Model.CurrentPage</a>
-        <a asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage + 1)"> &gt;</a>
+    @{ if (Model.CurrentPage - 1 != 0 && Model.CurrentPage != Model.MaxPage)
+        {
+            <div style="padding: 5px 0px 0px 45px">
+                <a style="font-size: 30px" asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage - 1)"> &lt; </a>
+                <a style="font-size: 30px" asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage)"> @Model.CurrentPage</a>
+                <a style="font-size: 30px" asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage + 1)"> &gt;</a>
+            </div>
+        }
+        else if (Model.CurrentPage - 1 == 0 && Model.CurrentPage != Model.MaxPage)
+        {
+            <div style="padding: 5px 0px 0px 45px">
+                <a style="font-size: 30px" asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage)"> @Model.CurrentPage</a>
+                <a style="font-size: 30px" asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage + 1)"> &gt; </a>
+            </div>
+        }
+        else if (Model.CurrentPage == Model.MaxPage && Model.CurrentPage - 1 != 0)
+        {
+            <div style="padding: 5px 0px 0px 45px">
+                <a style="font-size: 30px" asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage - 1)"> &lt;</a>
+                <a style="font-size: 30px" asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage)"> @Model.CurrentPage</a>
+            </div>
+        }
     }
-    else if (Model.CurrentPage - 1 == 0 && Model.CurrentPage != Model.MaxPage)
-    {
-        <a asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage)"> @Model.CurrentPage</a>
-        <a asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage + 1)"> &gt; </a>
-    }
-    else if (Model.CurrentPage == Model.MaxPage && Model.CurrentPage - 1 != 0)
-    {
-        <a asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage - 1)"> &lt;</a>
-        <a asp-action="Index" asp-controller="Comment" asp-route-id="@(Model.CurrentPage)"> @Model.CurrentPage</a>
-    }
-}
+</section>

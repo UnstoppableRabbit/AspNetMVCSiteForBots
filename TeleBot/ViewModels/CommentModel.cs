@@ -9,9 +9,9 @@ namespace TeleBot.ViewModels
         [Required(ErrorMessage = "Не указан комментарий")]
         public string Comment { get; set; }
 
-        public List<Comment> allComs = new List<Comment>();
-        public int CurrentPage;
-        public int MaxPage;
+        public List<comModel> allComs { get; set; }
+        public int CurrentPage { get; set; }
+        public int MaxPage { get; set; }
 
     }
 }

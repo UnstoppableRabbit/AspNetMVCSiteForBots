@@ -20,7 +20,12 @@ namespace TeleBot.Controllers
             CommentModel cm = new CommentModel
             {
                 allComs = (from x in bc.Comment
-                           select x)
+                           join z in bc.Persons on x.PersonId equals z.PersonId
+                           select new comModel { Name = $"{z.FirstName} {z.LastName}", 
+                                                 Email = z.Email,
+                                                 CommentDate = x.CommentDate,
+                                                 Text = x.Text,
+                                                 CommentId = x.CommentId })
                            .Skip((id - 1) * 5)
                            .Take(5).ToList(),
                 CurrentPage = id,
