@@ -2,6 +2,16 @@
 @{
     Layout = "_SecondLayout";
 }
-<div>@Model.Email</div>
-<div>@Model.FirstName</div>
-<div>@Model.LastName</div>
+<section id="content">
+    <div class="container">
+        <div class="row aln-center">
+            <section style="width: 80%">
+                <div>@Model.Email</div>
+                <div>@Model.FirstName</div>
+                <div>@Model.LastName</div>
+                <a asp-action="Change" style="color: white" asp-controller="Profile" class="button-large">Изменить</a>
+                <a asp-action="Logout" style="color: white" asp-controller="Account" class="button-large">Выйти</a>
+            </section>           
+        </div>
+    </div>
+</section>

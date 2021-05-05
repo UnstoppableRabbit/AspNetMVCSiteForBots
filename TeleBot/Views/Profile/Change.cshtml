@@ -1,0 +1,28 @@
+﻿@model TeleBot.ViewModels.ChangeModel
+@{
+    Layout = "_SecondLayout";
+}
+
+<h2>Изменение аккаунта</h2>
+
+<form asp-action="Change" asp-controller="Profile" asp-anti-forgery="true">
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+    <div>
+        <div>
+            <input type="text" value="@Model.user.Email" disabled="disabled"/>
+        </div>
+        <div>
+            <label asp-for="FirstName">Введите имя</label><br />
+            <input asp-for="FirstName" value="@Model.user.FirstName"/>
+            <span asp-validation-for="FirstName" />
+        </div>
+        <div>
+            <label asp-for="LastName">Введите фамилию</label><br />
+            <input asp-for="LastName" value="@Model.user.LastName"/>
+            <span asp-validation-for="LastName" />
+        </div>
+        <div>
+            <input type="submit" value="Сохранить" />
+        </div>
+    </div>
+</form>

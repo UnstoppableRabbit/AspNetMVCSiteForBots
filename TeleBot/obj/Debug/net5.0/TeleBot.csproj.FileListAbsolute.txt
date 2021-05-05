@@ -150,3 +150,4 @@ C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Order\In
 C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Admin\Comments.cshtml.g.cs
 C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Admin\Orders.cshtml.g.cs
+C:\Users\ASUS\source\repos\TeleBot\TeleBot\obj\Debug\net5.0\Razor\Views\Profile\Change.cshtml.g.cs

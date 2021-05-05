@@ -2,18 +2,19 @@
 @{
     Layout = "_SecondLayout";
 }
-<h2>Создание заказа</h2>
-
-<form asp-action="Index" asp-controller="Order" asp-anti-forgery="true">
-    <div class="validation" asp-validation-summary="ModelOnly"></div>
-    <div>
-        <div class="form-group">
-            <label asp-for="Description">Опишите функционал бота</label>
-            <input type="text" asp-for="Description" />
-            <span asp-validation-for="Description" />
+<section id="content" style="width: 100%">
+    <h2 style="padding-left: 10px">Создание заказа</h2>
+    <form asp-action="Index" asp-controller="Order" asp-anti-forgery="true">
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+        <div>
+            <div class="form-group">
+                <label style="padding-left: 10px" asp-for="Description">Опишите функционал бота:</label><br />
+                <textarea style="width: 97%; margin-left: 10px; margin-right: 10px; height: 120px; text-wrap:inherit; resize:none" type="text" asp-for="Description"></textarea>
+                <span style="padding-left: 10px" asp-validation-for="Description" />
+            </div>
+            <div style="padding: 10px" class="form-group">
+                <input type="submit" value="заказать" class="btn btn-outline-dark" />
+            </div>
         </div>
-        <div class="form-group">
-            <input type="submit" value="заказать" class="btn btn-outline-dark" />
-        </div>
-    </div>
-</form>
+    </form>
+</section>
